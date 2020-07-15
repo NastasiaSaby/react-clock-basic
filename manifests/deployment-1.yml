@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: "nas-94b1"
+spec:
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: "nas-94b1"
+    spec:
+      containers:
+        - name: "nas-94b1"
+          image: "nastasia.azurecr.io/nas"
+          ports:
+          - containerPort: 8080
