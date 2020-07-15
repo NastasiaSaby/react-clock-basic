@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: "nastasia2-455f"
+spec:
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: "nastasia2-455f"
+    spec:
+      containers:
+        - name: "nastasia2-455f"
+          image: "nastasia.azurecr.io/nastasia2"
+          ports:
+          - containerPort: 8080
